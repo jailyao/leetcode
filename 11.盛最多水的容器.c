@@ -45,9 +45,9 @@ int min(int a, int b) {
 
 int maxArea(int* height, int heightSize){
     int areaSize = 0;
-    int left = 0, right = heightSize - 1;
 
     // 双指针 O(n)
+    int left = 0, right = heightSize - 1;
     while (right > left) {
         int hl = height[left];
         int hr = height[right];
@@ -59,7 +59,7 @@ int maxArea(int* height, int heightSize){
     }
 
     // 暴力 O(n2)
-    // for (int i = 0; i < heightSize; i++) {
+    // for (int i = 0; i < heightSize - 1; i++) {
     //     int h1 = height[i];
     //     for (int j = i + 1; j < heightSize; j++) {
     //         int h2 = height[j];
